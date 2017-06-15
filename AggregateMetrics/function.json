@@ -1,0 +1,32 @@
+{
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 0 * * * *"
+    },
+    {
+      "type": "blob",
+      "name": "lastAggregationInputBlob",
+      "path": "aggregates/lastAggregation.json",
+      "connection": "AggregateStorage",
+      "direction": "in"
+    },
+    {
+      "type": "blob",
+      "name": "lastAggregationOutputBlob",
+      "path": "aggregates/lastAggregation.json",
+      "connection": "AggregateStorage",
+      "direction": "out"
+    },
+    {
+      "type": "blob",
+      "name": "queryResultsOutputBlob",
+      "path": "aggregates/queryResults_{DateTime}.json",
+      "connection": "AggregateStorage",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
